@@ -1,3 +1,4 @@
+.\" $XdotOrg: xc/programs/Xserver/hw/xfree86/doc/man/XF86VM.man,v 1.1.4.3.4.1 2004/03/04 17:47:35 eich Exp $
 .\" $TOG: XF86VM.man /main/6 1997/07/19 10:30:39 kaleb $
 .\"
 .\"
@@ -184,66 +185,66 @@ Returns the current Y location of the viewport.
 .ta 2.25i 3.5i
 \fIVideo Mode Settings:\fP
 typedef struct {
-    unsigned short	hdisplay;	/* Number of display pixels horizontally */
-    unsigned short	hsyncstart;	/* Horizontal sync start */
-    unsigned short	hsyncend;	/* Horizontal sync end */
-    unsigned short	htotal;	/* Total horizontal pixels */
-    unsigned short	vdisplay;	/* Number of display pixels vertically */
-    unsigned short	vsyncstart;	/* Vertical sync start */
-    unsigned short	vsyncend;	/* Vertical sync start */
-    unsigned short	vtotal;	/* Total vertical pixels */
-    unsigned int	flags;	/* Mode flags */
-    int	privsize;	/* Size of private */
-    INT32	*private;	/* Server privates */
+    unsigned short	hdisplay;	/\(** Number of display pixels horizontally */
+    unsigned short	hsyncstart;	/\(** Horizontal sync start */
+    unsigned short	hsyncend;	/\(** Horizontal sync end */
+    unsigned short	htotal;	/\(** Total horizontal pixels */
+    unsigned short	vdisplay;	/\(** Number of display pixels vertically */
+    unsigned short	vsyncstart;	/\(** Vertical sync start */
+    unsigned short	vsyncend;	/\(** Vertical sync start */
+    unsigned short	vtotal;	/\(** Total vertical pixels */
+    unsigned int	flags;	/\(** Mode flags */
+    int	privsize;	/\(** Size of private */
+    INT32	*private;	/\(** Server privates */
 } XF86VidModeModeLine;
 .sp
 typedef struct {
-    unsigned int	dotclock;	/* Pixel clock */
-    unsigned short	hdisplay;	/* Number of display pixels horizontally */
-    unsigned short	hsyncstart;	/* Horizontal sync start */
-    unsigned short	hsyncend;	/* Horizontal sync end */
-    unsigned short	htotal;	/* Total horizontal pixels */
-    unsigned short	vdisplay;	/* Number of display pixels vertically */
-    unsigned short	vsyncstart;	/* Vertical sync start */
-    unsigned short	vsyncend;	/* Vertical sync start */
-    unsigned short	vtotal;	/* Total vertical pixels */
-    unsigned int	flags;	/* Mode flags */
-    int	privsize;	/* Size of private */
-    INT32	*private;	/* Server privates */
+    unsigned int	dotclock;	/\(** Pixel clock */
+    unsigned short	hdisplay;	/\(** Number of display pixels horizontally */
+    unsigned short	hsyncstart;	/\(** Horizontal sync start */
+    unsigned short	hsyncend;	/\(** Horizontal sync end */
+    unsigned short	htotal;	/\(** Total horizontal pixels */
+    unsigned short	vdisplay;	/\(** Number of display pixels vertically */
+    unsigned short	vsyncstart;	/\(** Vertical sync start */
+    unsigned short	vsyncend;	/\(** Vertical sync start */
+    unsigned short	vtotal;	/\(** Total vertical pixels */
+    unsigned int	flags;	/\(** Mode flags */
+    int	privsize;	/\(** Size of private */
+    INT32	*private;	/\(** Server privates */
 } XF86VidModeModeInfo;
 .LP
 \fIMonitor information:\fP
 typedef struct {
-    char*	vendor;	/* Name of manufacturer */
-    char*	model;	/* Model name */
-    float	EMPTY;	/* unused, for backward compatibility */
-    unsigned char	nhsync;	/* Number of horiz sync ranges */
-    XF86VidModeSyncRange*	hsync;	/* Horizontal sync ranges */
-    unsigned char	nvsync;	/* Number of vert sync ranges */
-    XF86VidModeSyncRange*	vsync;	/* Vertical sync ranges */
+    char*	vendor;	/\(** Name of manufacturer */
+    char*	model;	/\(** Model name */
+    float	EMPTY;	/\(** unused, for backward compatibility */
+    unsigned char	nhsync;	/\(** Number of horiz sync ranges */
+    XF86VidModeSyncRange*	hsync;	/\(** Horizontal sync ranges */
+    unsigned char	nvsync;	/\(** Number of vert sync ranges */
+    XF86VidModeSyncRange*	vsync;	/\(** Vertical sync ranges */
 } XF86VidModeMonitor;
 .sp
 typedef struct {
-    float	hi;	/* Top of range */
-    float	lo;	/* Bottom of range */
+    float	hi;	/\(** Top of range */
+    float	lo;	/\(** Bottom of range */
 } XF86VidModeSyncRange;
 .LP
 typedef struct {
-    int type;			/* of event */
-    unsigned long serial;	/* # of last request processed by server */
-    Bool send_event;		/* true if this came from a SendEvent req */
-    Display *display;		/* Display the event was read from */
-    Window root;		/* root window of event screen */
-    int state;			/* What happened */
-    int kind;			/* What happened */
-    Bool forced;		/* extents of new region */
-    Time time;			/* event timestamp */
+    int type;			/\(** of event */
+    unsigned long serial;	/\(** # of last request processed by server */
+    Bool send_event;		/\(** true if this came from a SendEvent req */
+    Display *display;		/\(** Display the event was read from */
+    Window root;		/\(** root window of event screen */
+    int state;			/\(** What happened */
+    int kind;			/\(** What happened */
+    Bool forced;		/\(** extents of new region */
+    Time time;			/\(** event timestamp */
 } XF86VidModeNotifyEvent;
 .LP
 typedef struct {
-    float red;			/* Red Gamma value */
-    float green;		/* Green Gamma value */
-    float blue;			/* Blue Gamma value */
+    float red;			/\(** Red Gamma value */
+    float green;		/\(** Green Gamma value */
+    float blue;			/\(** Blue Gamma value */
 } XF86VidModeGamma;
 .fi
 .SH DESCRIPTION
